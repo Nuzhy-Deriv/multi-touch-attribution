@@ -571,7 +571,7 @@ class UserJourneyTracker {
         // If there's no referrer or landing page, ensure we at least have these basic attributes
         if (!hasAttribution && Object.keys(newAttribution).length > 0) {
             // Always save at least the landing page and timestamp on first visit
-            console.log('currentAttribution landing page',this.currentAttribution.landing_page)
+            // console.log('currentAttribution landing page',this.currentAttribution.landing_page)
             if (this.currentAttribution.landing_page === undefined) {
                 return true;
             }
@@ -994,7 +994,7 @@ class UserJourneyTracker {
 
         if(action === 'create'){
             API_ENDPOINT = this.getApiEndpoint('user_events');
-            console.log('landing page', event.attribution.landing_page);
+            // console.log('landing page', event.attribution.landing_page);
             payload = {
                 data: {
                     uuid: this.uuid,
